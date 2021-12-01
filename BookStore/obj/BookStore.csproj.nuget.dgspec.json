@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PC\\Desktop\\Pratics\\BookStoreProject\\BookStore\\BookStore.csproj": {}
+    "C:\\Users\\PC\\Desktop\\BookStoreGIT\\BookStoreAPI\\BookStore\\BookStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PC\\Desktop\\Pratics\\BookStoreProject\\BookStore\\BookStore.csproj": {
+    "C:\\Users\\PC\\Desktop\\BookStoreGIT\\BookStoreAPI\\BookStore\\BookStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Pratics\\BookStoreProject\\BookStore\\BookStore.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\BookStoreGIT\\BookStoreAPI\\BookStore\\BookStore.csproj",
         "projectName": "BookStore",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Pratics\\BookStoreProject\\BookStore\\BookStore.csproj",
+        "projectPath": "C:\\Users\\PC\\Desktop\\BookStoreGIT\\BookStoreAPI\\BookStore\\BookStore.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Pratics\\BookStoreProject\\BookStore\\obj\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\BookStoreGIT\\BookStoreAPI\\BookStore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,6 +38,18 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[10.3.4, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.12, )"
