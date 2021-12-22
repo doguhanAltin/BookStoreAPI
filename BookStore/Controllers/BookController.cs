@@ -2,12 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
-using BookStore.BookOperations;
-using BookStore.BookOperations.CreateBook;
-using BookStore.BookOperations.GetBookById;
-using BookStore.BookOperations.GetBooks;
-using BookStore.BookOperations.UpdateBook;
-using BookStore.CreateBook;
+using BookStore.Application.BookOperations;
+using BookStore.Application.BookOperations.CreateBook;
+using BookStore.Application.BookOperations.GetBookById;
+using BookStore.Application.BookOperations.GetBooks;
+using BookStore.Application.BookOperations.UpdateBook;
 using BookStore.DBOperations;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
@@ -43,14 +42,10 @@ namespace BookStore.Controllers
         GetBookByIdQuery query = new GetBookByIdQuery(_context,_mapper);
         GetBookByIdQueryValidator validate = new GetBookByIdQueryValidator();
         query.Id = id;
-        try{
+
         validate.ValidateAndThrow(query);
         var book  =query.Handle(id);
                 return Ok(book);
-}
-        catch(Exception ex ){
-            return BadRequest(ex.Message);
-        }
 
 
     }
@@ -59,13 +54,11 @@ namespace BookStore.Controllers
     public IActionResult AddBook([FromBody] CreateBookModel newbook){
  
         CreateBookCommand command = new CreateBookCommand(_context,_mapper);
-        try{
+
         command.Model= newbook;
         CreateBookCommandValidator validate = new CreateBookCommandValidator();
         validate.ValidateAndThrow(command);
-        command.Handle();}catch(Exception ex){
-            return BadRequest(ex.Message);
-        }
+        command.Handle();
 
         return Ok();
 
@@ -77,29 +70,23 @@ namespace BookStore.Controllers
         UpdateBookCommandValidator validate = new UpdateBookCommandValidator();
         command.Model=updatedBook;
         command.Id=id;
-        try{
+    
         validate.ValidateAndThrow(command);
         command.Handle(); 
-        return Ok();}
-        catch(Exception  ex){
-            return BadRequest(ex.Message);
-        }
-
+        return Ok();
+       
     }
     
     [HttpDelete("{id}")]
     public IActionResult DeleteBook(int id){
         DeleteBookCommand command = new DeleteBookCommand(_context);
         DeleteBookCommandValidator validate = new DeleteBookCommandValidator();
-        try{
+        command.Id=id;
+       
             validate.ValidateAndThrow(command);
             command.Handle();
             return Ok();
-        }catch(Exception ex)
-        {
 
-            return BadRequest(ex.Message);
-         }
         // var book =_context.Books.SingleOrDefault(x=>x.Id==id);
         // if(book is null){
         //     return BadRequest();

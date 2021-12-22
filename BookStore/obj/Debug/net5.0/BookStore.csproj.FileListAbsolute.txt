@@ -69,3 +69,4 @@ C:\Users\PC\Desktop\BookStoreGIT\BookStoreAPI\BookStore\obj\Debug\net5.0\BookSto
 C:\Users\PC\Desktop\BookStoreGIT\BookStoreAPI\BookStore\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\PC\Desktop\BookStoreGIT\BookStoreAPI\BookStore\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\PC\Desktop\BookStoreGIT\BookStoreAPI\BookStore\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\PC\Desktop\BookStoreGIT\BookStoreAPI\BookStore\bin\Debug\net5.0\Newtonsoft.Json.dll
