@@ -7,6 +7,7 @@ InMemory BookStore Web Api
 - Book
 - Author
 - Genre
+- User
 
 ## Frameworks and Libraries
 - Entity
