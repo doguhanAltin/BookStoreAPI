@@ -8,9 +8,9 @@ using BookStore.Entities;
 namespace BookStore.Application.AuthorOperations.Query{
  public class GetAuthorQuery{
 
-    private readonly BookStoreDBContext _context;
+    private readonly IBookStoreDBContext _context;
     private readonly IMapper _mapper;
-        public GetAuthorQuery(BookStoreDBContext context, IMapper mapper)
+        public GetAuthorQuery(IBookStoreDBContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

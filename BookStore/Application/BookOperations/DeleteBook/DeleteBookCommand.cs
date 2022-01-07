@@ -6,9 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 namespace BookStore.Application.BookOperations {
     public class DeleteBookCommand {
 
-     private readonly BookStoreDBContext dbContext ;
+     private readonly IBookStoreDBContext dbContext ;
      public int Id { get; set; }
-     public DeleteBookCommand(BookStoreDBContext _context){
+     public DeleteBookCommand(IBookStoreDBContext _context){
          dbContext=_context;
 
      }

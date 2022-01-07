@@ -10,9 +10,9 @@ using Microsoft.EntityFrameworkCore;
 namespace BookStore.Application.BookOperations.GetBooks{
 
 public class GetBooksQuery{
-     private readonly  BookStoreDBContext dBContext ;
+     private readonly  IBookStoreDBContext dBContext ;
      private readonly IMapper _mapper ;
-        public GetBooksQuery(BookStoreDBContext context, IMapper mapper)
+        public GetBooksQuery(IBookStoreDBContext context, IMapper mapper)
         {
             dBContext = context;
             _mapper = mapper;

@@ -6,12 +6,12 @@ using BookStore.DBOperations;
 namespace BookStore.Application.GenreOperations.Command.UpdateGenre{
 
     public class UpdateGenreCommand{
-        private readonly BookStoreDBContext _context ;
+        private readonly IBookStoreDBContext _context ;
 
         public UpdateGenreModel Model { get; set; }
         public int Id { get; set; }
 
-        public UpdateGenreCommand(BookStoreDBContext context)
+        public UpdateGenreCommand(IBookStoreDBContext context)
         {
             _context = context;
 

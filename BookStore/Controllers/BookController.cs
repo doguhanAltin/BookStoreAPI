@@ -9,17 +9,19 @@ using BookStore.Application.BookOperations.GetBooks;
 using BookStore.Application.BookOperations.UpdateBook;
 using BookStore.DBOperations;
 using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 namespace BookStore.Controllers
  {
+    [Authorize]
     [ApiController]
     [Route("[controller]s")]
     public class BookController : ControllerBase{
-        private readonly BookStoreDBContext _context;
+        private readonly IBookStoreDBContext _context;
         private readonly IMapper _mapper ;
-        public BookController(BookStoreDBContext context, IMapper mapper)
+        public BookController(IBookStoreDBContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

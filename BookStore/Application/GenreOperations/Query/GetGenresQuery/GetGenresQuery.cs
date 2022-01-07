@@ -6,10 +6,10 @@ using BookStore.Entities;
 
 namespace BookStore.Application.GenreOperations.Query.GetGenresQuery{
     public class GetGenresQuery{
-        public BookStoreDBContext _context { get; set; }
+        public IBookStoreDBContext _context { get; set; }
         public IMapper _mapper { get; set; }
 
-        public GetGenresQuery(BookStoreDBContext context, IMapper mapper)
+        public GetGenresQuery(IBookStoreDBContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

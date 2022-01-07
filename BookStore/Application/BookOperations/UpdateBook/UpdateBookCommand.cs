@@ -7,8 +7,8 @@ namespace BookStore.Application.BookOperations.UpdateBook{
     public class UpdateBookCommand{
     public UpdateBookModel Model { get; set; }
 public int Id { get; set; }
-    private readonly BookStoreDBContext dbContext ;
-    public UpdateBookCommand(BookStoreDBContext context){
+    private readonly IBookStoreDBContext dbContext ;
+    public UpdateBookCommand(IBookStoreDBContext context){
         dbContext=context;
     }
     

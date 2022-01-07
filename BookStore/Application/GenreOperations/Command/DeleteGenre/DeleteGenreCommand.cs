@@ -5,9 +5,9 @@ using System;
 namespace BookStore.Application.GenreOperations.Command.DeleteCommand{
 
     public class DeleteGenreCommand{
-        private readonly BookStoreDBContext _context;
+        private readonly IBookStoreDBContext _context;
         public int Id { get; set; }
-        public DeleteGenreCommand(BookStoreDBContext context)
+        public DeleteGenreCommand(IBookStoreDBContext context)
         {
             _context = context;
         }
